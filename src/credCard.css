@@ -1,0 +1,98 @@
+.bankName {
+	font-size: 1.5rem;
+	grid-area: bankName;
+	justify-self: flex-end;
+	margin-right: 0.75em;
+	margin-top: 0.5rem;
+}
+
+.expiration {
+	align-items: center;
+	display: grid;
+	grid-area: cardExp;
+	grid-template-areas:
+		'valid date'
+		'thru date';
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(2, 1fr);
+	justify-items: center;
+	letter-spacing: 3px;
+	width: 75%;
+}
+
+.expValid,
+.expThru {
+	font-size: 0.5rem;
+}
+
+.expValid {
+	align-self: flex-end;
+	grid-area: valid;
+}
+
+.expThru {
+	align-self: flex-start;
+	grid-area: thru;
+}
+
+.expDate {
+	font-size: 1.125rem;
+	grid-area: date;
+}
+
+.cardHolder {
+	font-size: 1.25rem;
+	grid-area: cardHolder;
+	margin-left: 1rem;
+}
+.cardNumber {
+	align-items: center;
+	display: grid;
+	justify-items: center;
+	grid-area: cardNumber;
+	grid-template-areas: 'one two three four';
+	font-size: 1.25rem;
+}
+
+.cardNumber li {
+	letter-spacing: 3px;
+	list-style: none;
+}
+
+.numberSetOne {
+	grid-area: one;
+}
+
+.numberSetTwo {
+	grid-area: two;
+}
+
+.numberSetThree {
+	grid-area: three;
+}
+
+.numberSetFour {
+	grid-area: four;
+}
+.cardSecurity {
+	font-size: 0.75rem;
+	margin-left: 1rem;
+	grid-area: cardSec;
+}
+.creditCard {
+	background-color: rgb(38, 84, 168);
+	border: 1px solid #000;
+	border-radius: 0.75em;
+	box-shadow: rgba(172, 169, 169, 0.2) 2px 2px 6px;
+	display: grid;
+	grid-template-areas:
+		'. bankName bankName bankName'
+		'. . . .'
+		'cardNumber cardNumber cardNumber cardNumber'
+		'cardSec cardExp cardExp .'
+		'cardHolder cardHolder cardHolder .';
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 2fr repeat(4, 1fr);
+	height: 230px;
+	width: 345px;
+}
